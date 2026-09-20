@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="TTM World helps autograph collectors discover signers, exchange knowledge, and make successful Through The Mail requests." />
-  <title>TTM World | Find the signer</title>
+  <title>TTM World | Test Drive</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -24,9 +24,11 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="eyebrow-dot"></span> The autograph collector's field guide</p>
         <h1>Find the signer.<br /><span>Send the request.</span></h1>
-        <p class="hero-text">A growing world of information for collectors sending autograph requests Through The Mail—from ballplayers and actors to artists, musicians, and public figures.</p>
+        <p class="hero-text">A living world of information for collectors sending Through The Mail requests—from ballplayers and actors to artists, musicians, and public figures.</p>
         <form class="search-box" id="searchForm">
-          <span class="search-icon">⌕</span><input id="searchInput" type="search" placeholder="Search a signer, sport, or profession..." aria-label="Search signers" /><button type="submit">Search</button>
+          <span class="search-icon">⌕</span>
+          <input id="searchInput" type="search" placeholder="Search a signer, sport, or profession..." aria-label="Search signers" />
+          <button type="submit">Search</button>
         </form>
         <p class="popular">Popular searches: <button data-search="Baseball">Baseball</button><button data-search="Actors">Actors</button><button data-search="Musicians">Musicians</button></p>
       </div>
@@ -41,17 +43,97 @@
     <section class="stats" aria-label="TTM World statistics"><div><strong>1,200+</strong><span>signers to discover</span></div><div><strong>34</strong><span>categories</span></div><div><strong>8,500+</strong><span>collector reports</span></div><div><strong>100%</strong><span>collector powered</span></div></section>
 
     <section class="section" id="directory">
-      <div class="section-heading"><div><p class="eyebrow">Start exploring</p><h2>Who are you looking for?</h2></div><a class="text-link" href="#directory">View all categories <span>→</span></a></div>
-      <div class="category-grid"><button class="category-card coral" data-search="Baseball"><span class="category-icon">⚾</span><span><b>Sports</b><small>Players, coaches & legends</small></span><i>→</i></button><button class="category-card blue" data-search="Actors"><span class="category-icon">✦</span><span><b>Actors & TV</b><small>Screen stars & performers</small></span><i>→</i></button><button class="category-card gold" data-search="Musicians"><span class="category-icon">♫</span><span><b>Music</b><small>Artists & songwriters</small></span><i>→</i></button><button class="category-card lavender" data-search="Artists"><span class="category-icon">✎</span><span><b>Artists & Authors</b><small>Creators & storytellers</small></span><i>→</i></button></div>
-      <div id="results" class="results" hidden></div>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Start exploring</p>
+          <h2>Who are you looking for?</h2>
+        </div>
+        <a class="text-link" href="#directory">View all categories <span>→</span></a>
+      </div>
+
+      <div class="category-grid">
+        <button class="category-card coral" data-search="Baseball"><span class="category-icon">⚾</span><span><b>Sports</b><small>Players, coaches & legends</small></span><i>→</i></button>
+        <button class="category-card blue" data-search="Actors"><span class="category-icon">✦</span><span><b>Actors & TV</b><small>Screen stars & performers</small></span><i>→</i></button>
+        <button class="category-card gold" data-search="Musicians"><span class="category-icon">♫</span><span><b>Music</b><small>Artists & songwriters</small></span><i>→</i></button>
+        <button class="category-card lavender" data-search="Artists"><span class="category-icon">✎</span><span><b>Artists & Authors</b><small>Creators & storytellers</small></span><i>→</i></button>
+      </div>
+
+      <div class="directory-panel">
+        <div class="filter-bar">
+          <div class="chip-group" id="categoryFilters">
+            <button class="chip active" data-category="all">All</button>
+            <button class="chip" data-category="Baseball">Baseball</button>
+            <button class="chip" data-category="Actors">Actors</button>
+            <button class="chip" data-category="Musicians">Musicians</button>
+            <button class="chip" data-category="Artists">Artists</button>
+          </div>
+          <select id="statusFilter" aria-label="Choose response status">
+            <option value="all">All response statuses</option>
+            <option value="Often responds">Often responds</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Slow response">Slow response</option>
+            <option value="Unverified">Unverified</option>
+          </select>
+        </div>
+        <div id="results" class="results-grid" aria-live="polite"></div>
+      </div>
     </section>
 
-    <section class="feature-section" id="community"><div class="feature-copy"><p class="eyebrow">Built by collectors</p><h2>Every return tells a story.</h2><p>Share what worked, learn from fellow collectors, and help keep signer information current for the next person in the mailbox.</p><a class="dark-button" href="#guides">Learn how to start <span>→</span></a></div><div class="postcard"><div class="postcard-top"><span>TTM WORLD</span><span>COLLECTOR REPORT · 01</span></div><div class="postcard-body"><div class="sun">✦</div><h3>A successful<br /><em>return.</em></h3><div class="postmark">★<br /><small>COLLECTED<br />WITH CARE</small></div></div><div class="postcard-footer">“Worth the wait.” <span>— A collector</span></div></div></section>
+    <section class="feature-section" id="community">
+      <div class="feature-copy">
+        <p class="eyebrow">Built by collectors</p>
+        <h2>Every return tells a story.</h2>
+        <p>Share what worked, learn from fellow collectors, and help keep signer information current for the next person in the mailbox.</p>
+        <a class="dark-button" href="#guides">Learn how to start <span>→</span></a>
+      </div>
+      <div class="postcard">
+        <div class="postcard-top"><span>TTM WORLD</span><span>COLLECTOR REPORT · 01</span></div>
+        <div class="postcard-body"><div class="sun">✦</div><h3>A successful<br /><em>return.</em></h3><div class="postmark">★<br /><small>COLLECTED<br />WITH CARE</small></div></div>
+        <div class="postcard-footer">“Worth the wait.” <span>— A collector</span></div>
+      </div>
+    </section>
 
-    <section class="guides section" id="guides"><div class="section-heading"><div><p class="eyebrow">Your first letter</p><h2>Ready to send?</h2></div><a class="text-link" href="#guides">See all guides <span>→</span></a></div><div class="guide-grid"><article><span>01</span><h3>The TTM basics</h3><p>Everything you need to send your first request with confidence.</p><a href="#guides">Read guide →</a></article><article><span>02</span><h3>What to include</h3><p>Build a thoughtful request that signers will want to answer.</p><a href="#guides">Read guide →</a></article><article><span>03</span><h3>Protect your return</h3><p>Simple tips for keeping your signed items safe in the mail.</p><a href="#guides">Read guide →</a></article></div></section>
+    <section class="guides section" id="guides">
+      <div class="section-heading">
+        <div><p class="eyebrow">Your first letter</p><h2>Ready to send?</h2></div>
+        <a class="text-link" href="#guides">See all guides <span>→</span></a>
+      </div>
+      <div class="guide-grid">
+        <article>
+          <span>01</span>
+          <h3>The TTM basics</h3>
+          <p>Everything you need to send your first request with confidence.</p>
+          <a href="#guides">Read guide →</a>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>What to include</h3>
+          <p>Build a thoughtful request that signers will want to answer.</p>
+          <a href="#guides">Read guide →</a>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Protect your return</h3>
+          <p>Simple tips for keeping your signed items safe in the mail.</p>
+          <a href="#guides">Read guide →</a>
+        </article>
+      </div>
+    </section>
   </main>
 
-  <footer><a class="brand" href="#top"><span class="brand-mark">✦</span><span>TTM <em>World</em></span></a><p>Find the signer. Send the request. Share the return.</p><small>© 2026 TTM World · Built for collectors, by collectors.</small></footer>
+  <footer>
+    <a class="brand" href="#top"><span class="brand-mark">✦</span><span>TTM <em>World</em></span></a>
+    <p>Find the signer. Send the request. Share the return.</p>
+    <small>© 2026 TTM World · Built for collectors, by collectors.</small>
+  </footer>
+
+  <div id="profileModal" class="modal hidden" aria-modal="true" role="dialog" aria-labelledby="profileTitle">
+    <div class="modal-card">
+      <button class="close-modal" id="closeModal" aria-label="Close profile">×</button>
+      <div id="profileContent"></div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

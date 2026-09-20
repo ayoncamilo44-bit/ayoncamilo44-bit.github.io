@@ -1,19 +1,221 @@
+const signers = [
+  {
+    id: 1,
+    name: 'Maya Thompson',
+    category: 'Baseball',
+    profession: 'Former MLB player',
+    status: 'Often responds',
+    responseTime: '4–6 weeks',
+    lastVerified: '2026-09-01',
+    location: 'United States',
+    notes: 'Best for one card and one photo. Include a self-addressed envelope and return postage.',
+    address: 'Maya Thompson Fan Mail, c/o Official Fan Club, 12 Stadium Lane, New York, NY 10001',
+    tips: ['Include 1–2 items max', 'Use a standard letter format', 'Send a stamped return envelope']
+  },
+  {
+    id: 2,
+    name: 'Daniel Park',
+    category: 'Actors',
+    profession: 'Television actor',
+    status: 'Moderate',
+    responseTime: '6–10 weeks',
+    lastVerified: '2026-08-18',
+    location: 'Los Angeles, CA',
+    notes: 'Often replies to photo requests. Avoid sending oversized items or collectibles.',
+    address: 'Daniel Park Fan Mail, 88 Sunset Boulevard, Los Angeles, CA 90028',
+    tips: ['Keep the request brief', 'Use a clean photo', 'No original art or signed memorabilia']
+  },
+  {
+    id: 3,
+    name: 'Lena Moore',
+    category: 'Musicians',
+    profession: 'Singer-songwriter',
+    status: 'Often responds',
+    responseTime: '3–5 weeks',
+    lastVerified: '2026-09-12',
+    location: 'Nashville, TN',
+    notes: 'Fan mail is usually handled through the official mailing desk. Short handwritten notes work best.',
+    address: 'Lena Moore, c/o Music Office, 65 Main Street, Nashville, TN 37201',
+    tips: ['Handwritten is ideal', 'Keep the note personal', 'Include one card or photo']
+  },
+  {
+    id: 4,
+    name: 'Avery Brooks',
+    category: 'Artists',
+    profession: 'Illustrator',
+    status: 'Slow response',
+    responseTime: '8–12 weeks',
+    lastVerified: '2026-07-29',
+    location: 'Chicago, IL',
+    notes: 'Very thoughtful replies. Best if you send a small postcard with a clear request.',
+    address: 'Avery Brooks Studio, 21 East River Street, Chicago, IL 60611',
+    tips: ['Use a postcard or small card', 'Be polite and direct', 'Avoid overloading with multiple items']
+  },
+  {
+    id: 5,
+    name: 'Nicolas Ruiz',
+    category: 'Baseball',
+    profession: 'Former pitcher',
+    status: 'Unverified',
+    responseTime: 'Unknown',
+    lastVerified: '2026-06-14',
+    location: 'Texas',
+    notes: 'Address should be checked before sending. Some requests are forwarded through a team office.',
+    address: 'Nicolas Ruiz Fan Mail, c/o Team Services, 44 South Field Avenue, Houston, TX 77002',
+    tips: ['Verify before sending', 'Check for official fan-mail address', 'Do not send valuables']
+  },
+  {
+    id: 6,
+    name: 'Sofia Bell',
+    category: 'Actors',
+    profession: 'Film actress',
+    status: 'Often responds',
+    responseTime: '2–4 weeks',
+    lastVerified: '2026-09-16',
+    location: 'New York, NY',
+    notes: 'Strong response rate when the request includes a good photo and a short note. Keep it neat and clear.',
+    address: 'Sofia Bell, c/o Management Office, 150 Madison Avenue, New York, NY 10016',
+    tips: ['Keep the request short', 'Include a photo and stamped return envelope', 'Use a clean, professional format']
+  }
+];
+
 const searchInput = document.querySelector('#searchInput');
 const searchForm = document.querySelector('#searchForm');
 const results = document.querySelector('#results');
-const categories = {
-  Baseball: ['Baseball players', 'Coaches & managers', 'Baseball legends'],
-  Actors: ['Film & television actors', 'Stage performers', 'Directors'],
-  Musicians: ['Singers & songwriters', 'Bands & instrumentalists', 'Music legends'],
-  Artists: ['Visual artists', 'Authors & illustrators', 'Creators']
-};
-function showResults(term) {
-  const cleanTerm = term.trim() || 'all signers';
-  const key = Object.keys(categories).find(item => item.toLowerCase() === cleanTerm.toLowerCase());
-  const matches = key ? categories[key] : ['People from every profession', 'Verified collector reports', 'Helpful request guides'];
-  results.hidden = false;
-  results.innerHTML = `<strong>Explore ${cleanTerm}</strong><ul>${matches.map(match => `<li>${match}</li>`).join('')}</ul><p>This directory is being built for the TTM World community. More signer profiles are coming soon.</p>`;
-  results.scrollIntoView({ behavior: 'smooth', block: 'center' });
+const categoryFilters = document.querySelectorAll('.chip');
+const statusFilter = document.querySelector('#statusFilter');
+const modal = document.querySelector('#profileModal');
+const closeModal = document.querySelector('#closeModal');
+const profileContent = document.querySelector('#profileContent');
+
+let activeCategory = 'all';
+let query = '';
+
+function matchesFilters(person) {
+  const textMatch = `${person.name} ${person.category} ${person.profession} ${person.location}`.toLowerCase().includes(query);
+  const categoryMatch = activeCategory === 'all' || person.category === activeCategory;
+  const statusMatch = statusFilter.value === 'all' || person.status === statusFilter.value;
+  return textMatch && categoryMatch && statusMatch;
 }
-searchForm.addEventListener('submit', event => { event.preventDefault(); showResults(searchInput.value); });
-document.querySelectorAll('[data-search]').forEach(button => button.addEventListener('click', () => { searchInput.value = button.dataset.search; showResults(button.dataset.search); }));
+
+function renderCards() {
+  const visible = signers.filter(matchesFilters);
+
+  if (!visible.length) {
+    results.innerHTML = `
+      <div class="empty-state">
+        <h3>No signers match this search.</h3>
+        <p>Try another name, category, or response status.</p>
+      </div>
+    `;
+    return;
+  }
+
+  results.innerHTML = visible.map(person => `
+    <article class="signer-card">
+      <div class="signer-top">
+        <span class="signer-badge">${person.category}</span>
+        <span class="signer-status">${person.status}</span>
+      </div>
+      <div>
+        <h3>${person.name}</h3>
+        <div class="signer-meta">
+          <div>${person.profession}</div>
+          <div>${person.location}</div>
+          <div>Response: ${person.responseTime}</div>
+        </div>
+      </div>
+      <p>${person.notes}</p>
+      <div class="card-actions">
+        <button class="link" data-view="${person.id}">View profile</button>
+        <button class="mini" data-view="${person.id}">Select</button>
+      </div>
+    </article>
+  `).join('');
+
+  document.querySelectorAll('[data-view]').forEach(button => {
+    button.addEventListener('click', () => openProfile(Number(button.dataset.view)));
+  });
+}
+
+function openProfile(personId) {
+  const person = signers.find(item => item.id === personId);
+  if (!person) return;
+
+  profileContent.innerHTML = `
+    <div class="profile-header">
+      <div>
+        <span class="signer-badge">${person.category}</span>
+        <h3 id="profileTitle">${person.name}</h3>
+        <div class="profile-meta">
+          <span>${person.profession}</span>
+          <span>•</span>
+          <span>${person.location}</span>
+          <span>•</span>
+          <span>${person.status}</span>
+        </div>
+      </div>
+      <div class="signer-status">${person.responseTime}</div>
+    </div>
+    <div class="profile-grid">
+      <div class="panel">
+        <h4>Request notes</h4>
+        <p>${person.notes}</p>
+      </div>
+      <div class="panel">
+        <h4>Best practices</h4>
+        <ul>
+          ${person.tips.map(tip => `<li>${tip}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+    <div class="panel" style="margin-top:18px;">
+      <h4>Official contact info</h4>
+      <p>${person.address}</p>
+    </div>
+    <div class="profile-actions">
+      <button class="secondary" type="button" id="reportBtn">Add report</button>
+      <button class="primary" type="button" id="favoriteBtn">Save signer</button>
+    </div>
+  `;
+
+  modal.classList.remove('hidden');
+  document.getElementById('reportBtn').addEventListener('click', () => {
+    alert('Collector report form coming next: this is the functional test drive for signer viewing.');
+  });
+  document.getElementById('favoriteBtn').addEventListener('click', () => {
+    alert(`${person.name} has been saved to your favorites.`);
+  });
+}
+
+function updateSearch(event) {
+  event.preventDefault();
+  query = searchInput.value.trim().toLowerCase();
+  renderCards();
+}
+
+document.querySelectorAll('[data-search]').forEach(button => {
+  button.addEventListener('click', () => {
+    searchInput.value = button.dataset.search;
+    query = button.dataset.search.toLowerCase();
+    renderCards();
+  });
+});
+
+categoryFilters.forEach(button => {
+  button.addEventListener('click', () => {
+    categoryFilters.forEach(chip => chip.classList.remove('active'));
+    button.classList.add('active');
+    activeCategory = button.dataset.category;
+    renderCards();
+  });
+});
+
+statusFilter.addEventListener('change', renderCards);
+searchForm.addEventListener('submit', updateSearch);
+closeModal.addEventListener('click', () => modal.classList.add('hidden'));
+modal.addEventListener('click', (event) => {
+  if (event.target === modal) modal.classList.add('hidden');
+});
+
+renderCards();
