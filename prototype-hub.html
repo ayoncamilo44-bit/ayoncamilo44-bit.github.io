@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TTM Prototype Hub</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #161b22;
+      --panel-alt: #21262d;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --muted: #8b949e;
+      --link: #58a6ff;
+      --heading: #f0f6fc;
+      --accent: #d29922;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
+
+    .prototype-banner {
+      background: var(--panel-alt);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px 40px;
+    }
+
+    h1, h2, h3 {
+      color: var(--heading);
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      color: var(--link);
+      margin-bottom: 12px;
+    }
+
+    .card {
+      margin-bottom: 28px;
+      padding: 22px 20px;
+      background: var(--panel);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: rgba(210, 153, 34, 0.08);
+      padding: 14px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 20px 0 26px;
+      color: var(--text);
+    }
+
+    ul {
+      margin: 10px 0 0 20px;
+      padding: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      margin-top: 16px;
+    }
+
+    .nav-links a {
+      display: inline-block;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="prototype-banner">
+    <strong>🧪 Prototype Build:</strong> Local testing phase only. No public data collection, live submissions, or real collector data are active.
+  </div>
+
+  <main class="container">
+    <h1>Through-The-Mail (TTM) Prototype Dashboard</h1>
+    <p class="muted">Welcome to the testing build. Use this space to review layouts, tracking logs, testing notes, and project drafts safely.</p>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="card-shops.html">Card Shop</a>
+      <a href="success-log.html">Success Log</a>
+      <a href="partners.html">Partners</a>
+      <a href="sponsor.html">Sponsor</a>
+      <a href="disclosure.html">Disclosure</a>
+    </div>
+
+    <div class="notice">
+      <strong>Prototype safety note:</strong> This page and the related project are intentionally limited to local demonstration work. Sample data is not for real mail requests, and no public user submissions are active.
+    </div>
+
+    <section id="sponsorship" class="card">
+      <h2>Future Support & Sponsorship</h2>
+      <p>This Through-The-Mail (TTM) hobby project is independently run and maintained by passionate collectors. Contributions, tips, and support may be used in the future to help cover postage, printing supplies, custom card stock, and maintenance of hobby research resources.</p>
+      <p><em>No sponsorship, contribution, or supporter arrangement is active at this time. Sponsorships or contributions do not guarantee autograph returns, priority handling, or commercial endorsements from any athletes, leagues, teams, or organizations.</em></p>
+    </section>
+
+    <section id="disclaimer" class="card">
+      <h2>Disclaimer & Usage Policy</h2>
+      <p><strong>Independent Fan Resource:</strong> This website is an independent, non-commercial hobby resource. It is not affiliated with, endorsed by, sponsored by, or officially connected with any professional sports leagues, racing associations, teams, or individual athletes.</p>
+      <p><strong>Prototype Data & Mailing Risk:</strong> All mailing addresses and public information shown in this prototype are sample/testing records only unless specifically verified and approved. Through-The-Mail collecting is voluntary and conducted at the individual sender’s own risk and expense. No representation or guarantee is made regarding response times, success rates, or the safety of items sent through the postal service.</p>
+      <p><strong>Sample data notice:</strong> Any name, address, or signer profile visible here should be treated as demonstration content and not used for real mail requests.</p>
+    </section>
+
+    <section id="references" class="card">
+      <h2>References & Hobby Resources</h2>
+      <p>This prototype draws inspiration from the broader collecting community. Check out these staple resources:</p>
+      <ul>
+        <li><a href="https://www.sportlots.com" target="_blank" rel="noopener noreferrer">Sportlots</a> — single-card marketplace and inventory builder</li>
+        <li><a href="https://www.comc.com/Cards/Buy-Baseball-Cards" target="_blank" rel="noopener noreferrer">COMC</a> — baseball card marketplace and singles research</li>
+        <li>Community address registries and historical sports archives</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
