@@ -3,15 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="TTM World helps autograph collectors discover signers, exchange knowledge, and make successful Through The Mail requests." />
+  <meta name="description" content="TTM World prototype build for testing collector directory layouts and sample data only." />
   <title>TTM World | Prototype</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .prototype-banner {
+      background: #21262d;
+      border-bottom: 1px solid #30363d;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #8b949e;
+    }
+    .prototype-note {
+      margin-top: 18px;
+      background: rgba(210, 153, 34, 0.08);
+      border-left: 4px solid #d29922;
+      padding: 12px 14px;
+      border-radius: 0 8px 8px 0;
+      color: #425467;
+      max-width: 620px;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+    .site-footer-note {
+      color: #6b7782;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+  </style>
 </head>
 <body>
-  <div class="prototype-banner" style="background:#21262d;border-bottom:1px solid #30363d;padding:12px 20px;text-align:center;font-size:14px;color:#8b949e;">
+  <div class="prototype-banner">
     <strong>🧪 Prototype Build:</strong> Local testing phase only. Sample data is not for real mail requests and no public submissions are active.
   </div>
 
@@ -30,7 +56,7 @@
         <p class="eyebrow"><span class="eyebrow-dot"></span> The autograph collector's field guide</p>
         <h1>Find the signer.<br /><span>Send the request.</span></h1>
         <p class="hero-text">A living world of information for collectors sending Through The Mail requests—from ballplayers and actors to artists, musicians, and public figures.</p>
-        <div class="prototype-note" style="margin-top:18px;background:rgba(210,153,34,.08);border-left:4px solid #d29922;padding:12px 14px;border-radius:0 8px 8px 0;color:#425467;max-width:620px;line-height:1.6;font-size:14px;">
+        <div class="prototype-note">
           <strong>Prototype note:</strong> All signer profiles and contact data in this build are sample/testing records only and should not be used for real mail requests.
         </div>
         <form class="search-box" id="searchForm">
@@ -133,6 +159,7 @@
     <a class="brand" href="#top"><span class="brand-mark">✦</span><span>TTM <em>World</em></span></a>
     <p>Find the signer. Send the request. Share the return.</p>
     <small>© 2026 TTM World · Prototype build for testing only.</small>
+    <div class="site-footer-note">Sample data is used for layout testing only. It is not a live directory or public collector database.</div>
   </footer>
 
   <div id="profileModal" class="modal hidden" aria-modal="true" role="dialog" aria-labelledby="profileTitle">
