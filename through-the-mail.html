@@ -1,31 +1,1043 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="A dark, collector-first Through the Mail signer directory and research hub.">
-<title>TTM Letters — Signers & Research Hub</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#0d1117;--panel:#141b23;--panel2:#19232d;--ink:#eef3f1;--muted:#9eaca9;--line:#2b3740;--orange:#ee805c;--orange2:#ffad78;--mint:#8fd0b2;--yellow:#e6bd68;--blue:#8ec6d5;--shadow:0 20px 55px #0008}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 82% 5%,#243a3a 0,transparent 28%),var(--bg);color:var(--ink);font:15px/1.55 'DM Sans',sans-serif}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}.notice{background:#111a20;border-bottom:1px solid var(--line);color:var(--muted);text-align:center;padding:8px;font-size:12px;letter-spacing:.04em}.notice b{color:var(--mint)}header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:20px;letter-spacing:-.03em}.logo-mark{display:grid;place-items:center;width:35px;height:35px;border-radius:10px;background:var(--orange);color:#15191c}.logo em{font:700 21px Fraunces,serif;color:var(--orange2);font-style:normal}nav{display:flex;gap:28px;color:var(--muted);font-size:13px}nav a:hover{color:var(--orange2)}.header-btn,.primary{border:1px solid var(--orange);border-radius:5px;color:#171b1d;background:var(--orange);padding:10px 15px;font-weight:700;font-size:13px}.header-btn:hover,.primary:hover{background:var(--orange2);border-color:var(--orange2)}h1,h2,h3{font-family:Fraunces,serif;line-height:1.05;margin:0}h1{font-size:clamp(48px,6vw,76px);letter-spacing:-.06em;max-width:690px}h1 em{font-style:normal;color:var(--orange2)}h2{font-size:43px;letter-spacing:-.04em}.eyebrow{color:var(--orange2);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin:0 0 17px}.eyebrow:before{content:'— ';color:var(--orange)}.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center;padding:92px 0 84px}.hero p:not(.eyebrow){color:var(--muted);max-width:540px;font-size:17px;margin:25px 0 29px}.search{display:flex;max-width:560px;background:var(--panel);border:1px solid var(--line);padding:6px;border-radius:6px;box-shadow:var(--shadow)}.search input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--ink);padding:12px}.search button{border:0;border-radius:4px;background:var(--orange);color:#161b1d;padding:0 18px;font-weight:700;cursor:pointer}.subtle{color:var(--muted);font-size:12px;margin-top:11px}.hero-card{background:linear-gradient(145deg,#1f3338,#131c23);border:1px solid #38504e;padding:31px;min-height:300px;position:relative;overflow:hidden;box-shadow:var(--shadow)}.hero-card:after{content:'✦';position:absolute;right:-12px;top:-32px;color:#e6bd6833;font-size:190px}.hero-card h3{font-size:31px;max-width:260px;position:relative;z-index:1}.route-list{position:relative;z-index:1;margin:30px 0 0;padding:0;list-style:none;color:var(--muted);font-size:13px}.route-list li{border-top:1px solid #ffffff1c;padding:11px 0}.route-list b{color:var(--mint);margin-right:8px}.stats{background:#131b22;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.stats .wrap{display:grid;grid-template-columns:repeat(3,1fr);padding:24px 0}.stat{padding:0 30px;border-right:1px solid var(--line)}.stat:first-child{padding-left:0}.stat:last-child{border:0}.stat strong{display:block;color:var(--yellow);font:700 28px Fraunces,serif}.stat span{color:var(--muted);font-size:12px}section{padding:88px 0}.head{display:flex;align-items:end;justify-content:space-between;margin-bottom:30px}.head p{color:var(--muted);max-width:390px;font-size:13px}.categories,.cards,.resources,.sponsors{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.category,.resource,.sponsor{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:23px;transition:.2s}.category:hover,.resource:hover,.sponsor:hover{transform:translateY(-4px);border-color:#657970;box-shadow:var(--shadow)}.category{min-height:172px;display:flex;flex-direction:column;justify-content:space-between}.category .icon{font-size:24px}.category h3{font-size:25px;margin:12px 0 5px}.category small,.resource p,.sponsor p{color:var(--muted);font-size:12px}.category strong{color:var(--orange2);font-size:12px}.finder{background:#101820;border:1px solid var(--line);padding:28px;border-radius:6px}.finder-bar{display:flex;gap:10px;justify-content:space-between;margin-bottom:22px}.finder-bar input,.finder-bar select{background:var(--panel);border:1px solid var(--line);border-radius:4px;color:var(--ink);padding:11px 12px;outline:0}.finder-bar input{flex:1}.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.filter{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:99px;padding:7px 13px;cursor:pointer;font-size:12px}.filter.active,.filter:hover{background:var(--orange);border-color:var(--orange);color:#171b1d}.card{background:var(--panel);border:1px solid var(--line);padding:19px;border-radius:4px}.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}.avatar{display:grid;place-items:center;width:43px;height:43px;border-radius:50%;background:#243833;color:var(--mint);font:700 16px Fraunces,serif}.badge{background:#1f3a31;color:var(--mint);font-size:10px;padding:5px 8px;border-radius:99px}.card h3{font-size:22px}.role{color:var(--muted);font-size:12px}.card hr{border:0;border-top:1px solid var(--line);margin:17px 0}.card-foot{display:flex;justify-content:space-between;color:var(--muted);font-size:11px}.card-foot b{color:var(--ink)}.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:25px}.discovery{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:start}.discovery>div>p{color:var(--muted);max-width:350px}.resources{grid-template-columns:repeat(3,1fr)}.resource{min-height:190px}.resource .number{color:var(--orange2);font-weight:700;font-size:12px}.resource h3{font-size:24px;margin:15px 0 8px}.resource ul{margin:15px 0 0;padding-left:18px;color:var(--muted);font-size:12px}.resource li{margin:5px 0}.sponsor-section{background:#111a20;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.sponsor{background:#151f28}.sponsor h3{font-size:22px;margin:13px 0 6px}.sponsor .tag{color:var(--blue);font-size:10px;text-transform:uppercase;letter-spacing:.1em}.sponsor a{display:inline-block;margin-top:17px;color:var(--orange2);font-size:12px;font-weight:700}.sponsor-note{color:var(--muted);font-size:11px;margin-top:16px}.footer{padding:34px 0;background:#090d12}.footer-row{display:flex;justify-content:space-between;align-items:end}.footer small{color:var(--muted)}.footer-links{display:flex;gap:20px;color:var(--muted);font-size:12px}.footer-links a:hover{color:var(--orange2)}
-@media(max-width:820px){nav{display:none}.hero,.discovery{grid-template-columns:1fr;gap:30px;padding:62px 0}.hero-card{max-width:600px}.categories,.cards,.resources,.sponsors{grid-template-columns:repeat(2,1fr)}.stats .wrap{gap:15px}.stat{padding:0 12px}.head{display:block}.head p{margin-top:13px}.finder-bar{flex-wrap:wrap}.finder-bar input{flex-basis:100%}}
-@media(max-width:520px){.wrap{width:calc(100% - 32px)}h1{font-size:50px}h2{font-size:37px}.header-btn{padding:8px 10px;font-size:11px}.categories,.cards,.resources,.sponsors,.stats .wrap{grid-template-columns:1fr}.stats .wrap{gap:15px}.stat{border:0;padding:0}.search{display:block;background:transparent;border:0;box-shadow:none;padding:0}.search input{width:100%;background:var(--panel);border:1px solid var(--line);margin-bottom:8px}.search button{width:100%;height:45px}.finder{padding:18px}.footer-row{display:block}.footer-links{margin-top:20px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A dark, collector-first Through the Mail signer directory and research hub.">
+  <title>TTM Letters — Signers & Research Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #141b23;
+      --panel-strong: #1a2430;
+      --panel-soft: #1e2a35;
+      --ink: #eef3f1;
+      --muted: #9eaca9;
+      --line: #2b3740;
+      --orange: #ee805c;
+      --orange-2: #ffad78;
+      --mint: #8fd0b2;
+      --yellow: #e6bd68;
+      --blue: #8ec6d5;
+      --shadow: 0 20px 55px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.5;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; }
+
+    .wrap {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .notice {
+      background: rgba(238,128,92,.12);
+      border-bottom: 1px solid rgba(238,128,92,.3);
+      color: #f5c5b4;
+      text-align: center;
+      padding: 10px 18px;
+      font-size: 13px;
+      letter-spacing: .02em;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(13,17,23,.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+      min-height: 76px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .logo-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), var(--orange-2));
+      color: var(--bg);
+      font-size: 15px;
+      box-shadow: 0 10px 22px rgba(238,128,92,.35);
+    }
+
+    .logo em {
+      font-style: normal;
+      color: var(--orange-2);
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    nav a {
+      transition: color .2s ease;
+    }
+
+    nav a:hover { color: var(--ink); }
+
+    .header-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.02);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 600;
+      letter-spacing: .02em;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .header-btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(238,128,92,.4);
+    }
+
+    .hero {
+      padding: 74px 0 30px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--orange-2);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      line-height: 1.05;
+      letter-spacing: -.03em;
+      font-family: "Fraunces", serif;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(3.2rem, 6vw, 6rem);
+      max-width: 540px;
+      margin-bottom: 18px;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--orange-2);
+    }
+
+    .hero-copy p.lead {
+      margin: 0;
+      max-width: 600px;
+      font-size: 1.08rem;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .primary-btn, .secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      border-radius: 999px;
+      padding: 0 18px;
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .primary-btn {
+      background: linear-gradient(135deg, var(--orange), var(--orange-2));
+      color: #161a1f;
+      box-shadow: 0 16px 30px rgba(238,128,92,.28);
+    }
+
+    .secondary-btn {
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: rgba(255,255,255,.02);
+    }
+
+    .primary-btn:hover, .secondary-btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero-meta .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--mint);
+      display: inline-block;
+      box-shadow: 0 0 12px rgba(143,208,178,.8);
+    }
+
+    .hero-card {
+      position: relative;
+      background: linear-gradient(180deg, rgba(25,35,45,.94), rgba(20,27,35,.96));
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 12px 18px auto auto;
+      width: 136px;
+      height: 136px;
+      background: radial-gradient(circle, rgba(238,128,92,.22) 0%, rgba(238,128,92,0) 65%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .map-shell {
+      position: relative;
+      height: 420px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      border: 1px solid rgba(255,255,255,.05);
+      overflow: hidden;
+    }
+
+    .globe {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 210px;
+      height: 210px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, rgba(143,208,178,.35), rgba(143,208,178,.08) 36%, rgba(8,12,18,.9) 58%);
+      border: 1px solid rgba(143,208,178,.35);
+      box-shadow: inset 0 0 40px rgba(143,208,178,.15), 0 20px 28px rgba(0,0,0,.2);
+    }
+
+    .globe::before, .globe::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+    }
+
+    .globe::before {
+      background: repeating-radial-gradient(circle at center, rgba(255,255,255,.08) 0 2px, transparent 2px 18px);
+      opacity: .55;
+    }
+
+    .globe::after {
+      inset: 20px;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+
+    .globe-label {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-weight: 800;
+      font-size: 2.2rem;
+      letter-spacing: .08em;
+      color: var(--ink);
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: rgba(19,25,31,.7);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .pulse { position: absolute; border-radius: 50%; }
+    .pulse.one { width: 140px; height: 140px; top: 50%; left: 50%; transform: translate(-50%,-50%); border: 1px solid rgba(142,198,213,.3); }
+    .pulse.two { width: 200px; height: 200px; top: 50%; left: 50%; transform: translate(-50%,-50%); border: 1px solid rgba(142,198,213,.2); }
+
+    .floating-note {
+      position: absolute;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(16,22,28,.86);
+      box-shadow: var(--shadow);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .floating-note.top { top: 30px; left: 24px; }
+    .floating-note.bottom { right: 18px; bottom: 28px; }
+    .floating-note strong { color: var(--ink); }
+
+    .stats {
+      padding: 18px 0 8px;
+    }
+
+    .stats .wrap {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,.02);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px 18px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .stat strong {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      line-height: 1;
+      font-family: "Fraunces", serif;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .section {
+      padding: 96px 0 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 26px;
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 4vw, 3.1rem);
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    .link-arrow {
+      color: var(--orange-2);
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+
+    .finder-shell {
+      background: linear-gradient(180deg, rgba(30,42,53,.68), rgba(20,27,35,.8));
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.02);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 9px 14px;
+      cursor: pointer;
+      transition: all .2s ease;
+      font-weight: 600;
+    }
+
+    .chip.active {
+      background: rgba(238,128,92,.14);
+      border-color: rgba(238,128,92,.45);
+      color: var(--ink);
+    }
+
+    .toolbar-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: min(100%, 300px);
+      background: rgba(9,12,17,.52);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0 14px;
+    }
+
+    .search-box input {
+      background: transparent;
+      border: 0;
+      outline: 0;
+      color: var(--ink);
+      min-height: 42px;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    .search-box input::placeholder { color: var(--muted); }
+
+    select {
+      background: rgba(9,12,17,.52);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--ink);
+      min-height: 42px;
+      padding: 0 14px;
+      outline: 0;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(25,35,45,.9), rgba(17,22,27,.88));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-height: 240px;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(238,128,92,.4);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      background: linear-gradient(135deg, rgba(238,128,92,.22), rgba(142,198,213,.25));
+      border: 1px solid rgba(255,255,255,.08);
+      color: var(--ink);
+    }
+
+    .status {
+      font-size: 12px;
+      border-radius: 999px;
+      padding: 7px 10px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .status.often { color: var(--mint); border-color: rgba(143,208,178,.3); }
+    .status.moderate { color: var(--yellow); border-color: rgba(230,189,104,.28); }
+    .status.slow { color: var(--blue); border-color: rgba(142,198,213,.28); }
+    .status.unverified { color: #d3c2a4; border-color: rgba(211,194,164,.2); }
+
+    .card h3 {
+      font-family: "DM Sans", sans-serif;
+      font-size: 1.32rem;
+      line-height: 1.2;
+      letter-spacing: -.02em;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .card-footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,.04);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .card-footer .tag {
+      color: var(--orange-2);
+      font-weight: 700;
+    }
+
+    .discovery-grid, .resources-grid, .sponsor-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .info-panel, .resource, .sponsor {
+      background: rgba(255,255,255,.02);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px 20px;
+    }
+
+    .info-panel .step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: rgba(238,128,92,.12);
+      color: var(--orange-2);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .info-panel h3 {
+      font-family: "DM Sans", sans-serif;
+      font-size: 1.22rem;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .info-panel p, .resource p, .sponsor p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .resource a, .sponsor a {
+      display: inline-flex;
+      margin-top: 16px;
+      color: var(--orange-2);
+      font-weight: 700;
+    }
+
+    .community-wrap {
+      padding-top: 96px;
+    }
+
+    .community-box {
+      background: linear-gradient(180deg, rgba(16,24,31,.94), rgba(19,27,35,.96));
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 22px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .community-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+      padding: 14px 10px;
+    }
+
+    .community-copy p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    .mini-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 220px;
+    }
+
+    .mini-card .stamp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(238,128,92,.12);
+      border: 1px solid rgba(238,128,92,.35);
+      color: var(--orange-2);
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .mini-card h3 {
+      font-family: "DM Sans", sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .mini-card .quote {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    footer {
+      margin-top: 96px;
+      border-top: 1px solid var(--line);
+      background: rgba(12,17,22,.58);
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 120px;
+      flex-wrap: wrap;
+      padding: 16px 0;
+    }
+
+    .footer-row small {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .muted-text {
+      color: var(--muted);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .community-box {
+        grid-template-columns: 1fr;
+      }
+
+      .results-grid,
+      .discovery-grid,
+      .resources-grid,
+      .sponsor-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 760px) {
+      nav { display: none; }
+      .section { padding-top: 72px; }
+      .results-grid,
+      .discovery-grid,
+      .resources-grid,
+      .sponsor-grid,
+      .stats .wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head,
+      .toolbar,
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-row {
+        min-height: 68px;
+      }
+
+      .hero {
+        padding-top: 54px;
+      }
+
+      h1 {
+        max-width: 420px;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="notice"><b>Community-powered research hub</b> · Always verify current addresses before sending mail</div>
-<div class="wrap"><header><a class="logo" href="#top"><span class="logo-mark">✦</span><span>TTM <em>Letters</em></span></a><nav><a href="#directory">Directory</a><a href="#discovery">Find resources</a><a href="#community">Community</a></nav><a class="header-btn" href="#directory">Find a signer →</a></header></div>
-<main id="top"><div class="wrap"><section class="hero"><div><p class="eyebrow">Through the mail, without the guesswork</p><h1>When ideas run out, <em>start here.</em></h1><p>Discover signers, then find reliable places, people, and timing tips to help you plan your next Through the Mail request.</p><form class="search" id="heroSearch"><input id="heroInput" type="search" placeholder="Search a signer, category, or city" aria-label="Search signers"><button>Explore signers</button></form><div class="subtle">Search the directory or jump to a research path below.</div></div><div class="hero-card"><h3>Your next letter has a starting point.</h3><ul class="route-list"><li><b>01</b> Browse a signer or category</li><li><b>02</b> Compare community research paths</li><li><b>03</b> Check when and where to send</li></ul></div></section></div>
-<div class="stats"><div class="wrap"><div class="stat"><strong>1,200+</strong><span>signers to discover</span></div><div class="stat"><strong>3 ways</strong><span>to find your next resource</span></div><div class="stat"><strong>24/7</strong><span>collector research, at your pace</span></div></div></div>
-<div class="wrap"><section id="directory"><div class="head"><div><p class="eyebrow">Start exploring</p><h2>Who would you like to write to?</h2></div><p>Use the categories when you know the world you want to explore, or search by name and place.</p></div><div class="categories"><a class="category" href="#signer-finder" data-filter="Sports"><span class="icon">⚾</span><div><h3>Sports</h3><small>Players, coaches & legends</small></div><strong>Explore →</strong></a><a class="category" href="#signer-finder" data-filter="Actors"><span class="icon">✦</span><div><h3>Actors & TV</h3><small>Screen stars & performers</small></div><strong>Explore →</strong></a><a class="category" href="#signer-finder" data-filter="Music"><span class="icon">♫</span><div><h3>Music</h3><small>Artists & songwriters</small></div><strong>Explore →</strong></a><a class="category" href="#signer-finder" data-filter="Creators"><span class="icon">✎</span><div><h3>Creators</h3><small>Authors, artists & storytellers</small></div><strong>Explore →</strong></a></div></section>
-<section class="finder" id="signer-finder"><div class="head"><div><p class="eyebrow">Community directory</p><h2>Featured signers</h2></div><p id="resultCount">Showing 6 signers</p></div><div class="finder-bar"><input id="finderInput" type="search" placeholder="Filter by name, role, or city" aria-label="Filter featured signers"><select id="statusFilter" aria-label="Filter by response status"><option value="All">All response statuses</option><option>Often responds</option><option>Moderate</option><option>Slow response</option><option>Unverified</option></select></div><div class="filter-row"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Sports">Sports</button><button class="filter" data-filter="Actors">Actors</button><button class="filter" data-filter="Music">Music</button><button class="filter" data-filter="Creators">Creators</button></div><div class="cards" id="cards"></div></section>
-<section id="discovery" class="discovery"><div><p class="eyebrow">No ideas? No problem.</p><h2>Three ways to keep researching.</h2><p>Choose the path that matches what you need right now. These are starting points, not guarantees—verify every detail before mailing.</p></div><div class="resources"><article class="resource"><span class="number">01 · HOW</span><h3>Learn the process</h3><p>Use guides and collector checklists when you need help preparing a thoughtful request.</p><ul><li>Request and envelope basics</li><li>What to include</li><li>Return-mail protection</li></ul></article><article class="resource"><span class="number">02 · WHERE</span><h3>Find more places</h3><p>Look beyond one directory when you need a fresh lead or a second opinion.</p><ul><li>Official team or agency pages</li><li>Publisher and venue sites</li><li>Collector communities</li></ul></article><article class="resource"><span class="number">03 · WHEN</span><h3>Choose your timing</h3><p>Plan around seasons, events, releases, and the response windows shared by collectors.</p><ul><li>Off-season research</li><li>Recent community reports</li><li>Set a follow-up reminder</li></ul></article></div></section></div>
-<section class="sponsor-section" id="community"><div class="wrap"><div class="head"><div><p class="eyebrow">Trusted starting points</p><h2>Community & sponsor resources</h2></div><p>External communities can add context and recent reports. Open them in a new tab and use your own judgment.</p></div><div class="sponsors"><article class="sponsor"><span class="tag">Community</span><h3>SportsCollectors.net</h3><p>Explore collector conversations, success reports, and sport-specific ideas.</p><a href="https://www.sportscollectors.net/" target="_blank" rel="noopener noreferrer">Visit community ↗</a></article><article class="sponsor"><span class="tag">Community</span><h3>SCF Forums</h3><p>Compare hobby experiences and discuss autograph collecting with other fans.</p><a href="https://www.sportscardforum.com/" target="_blank" rel="noopener noreferrer">Visit community ↗</a></article><article class="sponsor"><span class="tag">Reference</span><h3>Sports Card Forum TTM</h3><p>A useful place to look for community-maintained TTM conversations and reports.</p><a href="https://www.sportscardforum.com/forums/through-the-mail.52/" target="_blank" rel="noopener noreferrer">Open TTM forum ↗</a></article></div><p class="sponsor-note">External links are provided as research starting points. TTM Letters does not guarantee addresses, response rates, sponsorship, or the accuracy of third-party information.</p></div></section>
-</main><footer class="footer"><div class="wrap footer-row"><div><a class="logo" href="#top"><span class="logo-mark">✦</span><span>TTM <em>Letters</em></span></a><small>Find the signer. Research with care. Send the letter.</small></div><div class="footer-links"><a href="#directory">Directory</a><a href="#discovery">Resources</a><a href="#top">Back to top ↑</a></div></div></footer>
-<script>
-const signers=[{name:'Maya Thompson',category:'Sports',role:'Former MLB player',city:'United States',time:'4–6 weeks',status:'Often responds',initials:'MT'},{name:'Daniel Park',category:'Actors',role:'Television actor',city:'Los Angeles, CA',time:'6–10 weeks',status:'Moderate',initials:'DP'},{name:'Lena Moore',category:'Music',role:'Singer-songwriter',city:'Nashville, TN',time:'3–5 weeks',status:'Often responds',initials:'LM'},{name:'Avery Brooks',category:'Creators',role:'Illustrator & author',city:'Chicago, IL',time:'8–12 weeks',status:'Slow response',initials:'AB'},{name:'Nicolas Ruiz',category:'Sports',role:'Former pitcher',city:'Texas',time:'Check listing',status:'Unverified',initials:'NR'},{name:'Sofia Bell',category:'Actors',role:'Film actress',city:'New York, NY',time:'2–4 weeks',status:'Often responds',initials:'SB'}];
-let active='All',query='';const cards=document.querySelector('#cards'),count=document.querySelector('#resultCount');function render(){const status=document.querySelector('#statusFilter').value;const list=signers.filter(s=>(active==='All'||s.category===active)&&(status==='All'||s.status===status)&&(`${s.name} ${s.category} ${s.role} ${s.city}`.toLowerCase().includes(query)));count.textContent=`Showing ${list.length} ${list.length===1?'signer':'signers'}`;cards.innerHTML=list.length?list.map(s=>`<article class="card"><div class="card-top"><span class="avatar">${s.initials}</span><span class="badge">${s.status}</span></div><h3>${s.name}</h3><div class="role">${s.role} · ${s.city}</div><hr><div class="card-foot"><span>Typical wait</span><b>${s.time}</b></div></article>`).join(''):'<div class="empty">No matches yet. Try a different category, city, or response status.</div>'}function setFilter(value){active=value;document.querySelectorAll('.filter').forEach(b=>b.classList.toggle('active',b.dataset.filter===active));render()}document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();setFilter(b.dataset.filter);document.querySelector('#signer-finder').scrollIntoView({behavior:'smooth'})}));document.querySelector('#finderInput').addEventListener('input',e=>{query=e.target.value.toLowerCase().trim();render()});document.querySelector('#statusFilter').addEventListener('change',render);document.querySelector('#heroSearch').addEventListener('submit',e=>{e.preventDefault();query=document.querySelector('#heroInput').value.toLowerCase().trim();document.querySelector('#finderInput').value=query;setFilter('All');document.querySelector('#signer-finder').scrollIntoView({behavior:'smooth'})});render();
-</script>
-</body></html>
+  <div class="notice"><b>Community-powered research hub</b> · Always verify current addresses before sending mail</div>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="logo" href="#top" aria-label="TTM Letters home">
+        <span class="logo-mark">✦</span>
+        <span>TTM <em>Letters</em></span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#directory">Directory</a>
+        <a href="#discovery">Resources</a>
+        <a href="#community">Community</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <a class="header-btn" href="#directory">Explore signers</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Through the mail, without the guesswork</p>
+          <h1>When ideas run out, <em>start here.</em></h1>
+          <p class="lead">Discover signers, compare response patterns, and research the best next targets for your next Through the Mail request.</p>
+
+          <div class="hero-actions">
+            <a class="primary-btn" href="#directory">Browse directory</a>
+            <a class="secondary-btn" href="#discovery">Find resources</a>
+          </div>
+
+          <div class="hero-meta">
+            <span><span class="dot"></span> Community-driven</span>
+            <span>Updated regularly</span>
+            <span>Always verify addresses</span>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="TTM map illustration">
+          <div class="map-shell">
+            <div class="pulse one"></div>
+            <div class="pulse two"></div>
+            <div class="globe"></div>
+            <div class="globe-label">TTM</div>
+            <div class="floating-note top"><strong>1,200+</strong> signer profiles</div>
+            <div class="floating-note bottom"><strong>3</strong> research paths</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="wrap">
+        <div class="stat">
+          <strong>1,200+</strong>
+          <span>signers to discover</span>
+        </div>
+        <div class="stat">
+          <strong>3 ways</strong>
+          <span>to find your next resource</span>
+        </div>
+        <div class="stat">
+          <strong>12+</strong>
+          <span>collector-focused categories</span>
+        </div>
+        <div class="stat">
+          <strong>24/7</strong>
+          <span>research momentum</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="directory">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Start exploring</p>
+            <h2>Who would you like to write to?</h2>
+          </div>
+          <p>Use the categories when you know the world you want to target, then narrow by response status and search.</p>
+        </div>
+
+        <div class="finder-shell">
+          <div class="toolbar">
+            <div class="chip-row" aria-label="Category filters">
+              <button class="chip active" data-category="All">All</button>
+              <button class="chip" data-category="Sports">Sports</button>
+              <button class="chip" data-category="Actors">Actors</button>
+              <button class="chip" data-category="Music">Music</button>
+              <button class="chip" data-category="Authors">Authors</button>
+              <button class="chip" data-category="Public Figures">Public Figures</button>
+            </div>
+
+            <div class="toolbar-controls">
+              <div class="search-box" aria-label="Search signers">
+                <span aria-hidden="true">⌕</span>
+                <input id="searchInput" type="search" placeholder="Search a signer or category" aria-label="Search signers">
+              </div>
+
+              <select id="statusFilter" aria-label="Choose response status">
+                <option value="All">All response statuses</option>
+                <option value="Often responds">Often responds</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Slow response">Slow response</option>
+                <option value="Unverified">Unverified</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="results" class="results-grid" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="discovery" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">No ideas? No problem.</p>
+            <h2>Three ways to keep researching.</h2>
+          </div>
+          <p>Choose the path that matches what you need right now. These are the places to keep momentum going between requests.</p>
+        </div>
+
+        <div class="discovery-grid">
+          <article class="info-panel">
+            <div class="step">01</div>
+            <h3>Start with a category</h3>
+            <p>Pick the lane that fits your collection and scan through the most active, well-known names in that world.</p>
+          </article>
+          <article class="info-panel">
+            <div class="step">02</div>
+            <h3>Check response trends</h3>
+            <p>Look for reliable returns, slower replies, and current updates so your time and postage are well spent.</p>
+          </article>
+          <article class="info-panel">
+            <div class="step">03</div>
+            <h3>Use trusted sources</h3>
+            <p>Cross-check community discussions, mailing lists, and recent reports before sending a first request.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section community-wrap" id="community">
+      <div class="wrap">
+        <div class="community-box">
+          <div class="community-copy">
+            <p class="eyebrow">Trusted starting points</p>
+            <h2>Community &amp; sponsor resources</h2>
+            <p>External communities and collector-run references can help you narrow down targets and spot trends before you mail out your request.</p>
+            <a class="primary-btn" href="#about">Why this matters</a>
+          </div>
+
+          <div class="mini-card">
+            <div class="stamp">✦</div>
+            <h3>Collect what works.</h3>
+            <p class="quote">“The best research is the kind you can repeat. Save the names, track the returns, and keep your next request sharper.”</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Research hub</p>
+            <h2>What this page is for.</h2>
+          </div>
+        </div>
+
+        <div class="resources-grid">
+          <article class="resource">
+            <h3>Collector-first directory</h3>
+            <p>Find names by interest, response reliability, and category fit without losing time on bad leads.</p>
+            <a href="#directory">Open directory →</a>
+          </article>
+          <article class="resource">
+            <h3>Mailing checklist</h3>
+            <p>Use a clean, repeatable process for envelopes, personalization, and shipping details before you send.</p>
+            <a href="#community">See community tips →</a>
+          </article>
+          <article class="resource">
+            <h3>Research momentum</h3>
+            <p>Keep your next target in motion with a simple system for tracking status, notes, and follow-up timing.</p>
+            <a href="#discovery">Explore resources →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div>
+        <a class="logo" href="#top" aria-label="TTM Letters home">
+          <span class="logo-mark">✦</span>
+          <span>TTM <em>Letters</em></span>
+        </a>
+      </div>
+      <small>Find the signer. Research with intent. Send the request.</small>
+      <small>Always verify current addresses before mailing.</small>
+    </div>
+  </footer>
+
+  <script>
+    const signers = [
+      { name: 'Maya Thompson', category: 'Sports', role: 'Former MLB player', city: 'United States', time: '4-6 weeks', status: 'Often responds', initials: 'MT' },
+      { name: 'Daniel Park', category: 'Actors', role: 'Actor / TV personality', city: 'United States', time: '6-8 weeks', status: 'Moderate', initials: 'DP' },
+      { name: 'Avery Brooks', category: 'Music', role: 'Singer-songwriter', city: 'United States', time: '8-10 weeks', status: 'Slow response', initials: 'AB' },
+      { name: 'Sofia Ramirez', category: 'Authors', role: 'Novelist & essayist', city: 'United Kingdom', time: '4-6 weeks', status: 'Often responds', initials: 'SR' },
+      { name: 'Ethan Cole', category: 'Public Figures', role: 'Podcast host', city: 'Canada', time: '6-8 weeks', status: 'Moderate', initials: 'EC' },
+      { name: 'Nia Patel', category: 'Sports', role: 'Former tennis pro', city: 'United States', time: '8-12 weeks', status: 'Unverified', initials: 'NP' },
+      { name: 'Liam Foster', category: 'Actors', role: 'Film actor', city: 'United States', time: '4-5 weeks', status: 'Often responds', initials: 'LF' },
+      { name: 'Harper Quinn', category: 'Music', role: 'Rapper and producer', city: 'United States', time: '6-10 weeks', status: 'Slow response', initials: 'HQ' },
+      { name: 'Owen Harris', category: 'Authors', role: 'Children’s author', city: 'Australia', time: '5-7 weeks', status: 'Moderate', initials: 'OH' },
+      { name: 'Riley Stone', category: 'Public Figures', role: 'Former athlete & commentator', city: 'United States', time: '6-8 weeks', status: 'Often responds', initials: 'RS' },
+      { name: 'Camila Nguyen', category: 'Sports', role: 'Retired basketball star', city: 'United States', time: '4-6 weeks', status: 'Often responds', initials: 'CN' },
+      { name: 'Julian Shaw', category: 'Actors', role: 'Stage performer', city: 'United States', time: '8-12 weeks', status: 'Unverified', initials: 'JS' }
+    ];
+
+    const results = document.getElementById('results');
+    const searchInput = document.getElementById('searchInput');
+    const statusFilter = document.getElementById('statusFilter');
+    const chips = document.querySelectorAll('.chip');
+
+    let activeCategory = 'All';
+
+    function getStatusClass(status) {
+      const value = status.toLowerCase();
+      if (value.includes('often')) return 'often';
+      if (value.includes('moderate')) return 'moderate';
+      if (value.includes('slow')) return 'slow';
+      return 'unverified';
+    }
+
+    function renderCards() {
+      const query = searchInput.value.trim().toLowerCase();
+      const statusValue = statusFilter.value;
+
+      const filtered = signers.filter((signer) => {
+        const categoryMatch = activeCategory === 'All' || signer.category === activeCategory;
+        const textMatch = !query || [signer.name, signer.role, signer.category, signer.city].join(' ').toLowerCase().includes(query);
+        const statusMatch = statusValue === 'All' || signer.status === statusValue;
+        return categoryMatch && textMatch && statusMatch;
+      });
+
+      results.innerHTML = filtered.map((signer) => `
+        <article class="card">
+          <div class="card-top">
+            <div class="avatar" aria-label="${signer.name} initials">${signer.initials}</div>
+            <span class="status ${getStatusClass(signer.status)}">${signer.status}</span>
+          </div>
+
+          <div>
+            <h3>${signer.name}</h3>
+            <div class="meta">
+              <span>${signer.category}</span>
+              <span>${signer.city}</span>
+            </div>
+          </div>
+
+          <p>${signer.role}</p>
+
+          <div class="card-footer">
+            <span>${signer.time}</span>
+            <span class="tag">Research</span>
+          </div>
+        </article>
+      `).join('') || '<div class="card" style="grid-column:1/-1; min-height:160px; display:grid; place-items:center; color:var(--muted);">No signers match those filters.</div>';
+    }
+
+    chips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        chips.forEach((item) => item.classList.toggle('active', item === chip));
+        activeCategory = chip.dataset.category;
+        renderCards();
+      });
+    });
+
+    searchInput.addEventListener('input', renderCards);
+    statusFilter.addEventListener('change', renderCards);
+
+    renderCards();
+  </script>
+</body>
+</html>
